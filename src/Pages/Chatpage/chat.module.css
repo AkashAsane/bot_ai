@@ -1,0 +1,159 @@
+.Mainwrapper {
+  display: flex;
+  min-height: 100vh;
+  
+}
+
+.Chatbox {
+  background: linear-gradient(
+    180deg,
+    rgba(215, 199, 244, 0.2) 0%,
+    rgba(151, 133, 186, 0.2) 100%
+  );
+  width: 100%;
+}
+
+
+.Chatbox h1 {
+  margin-left: 66px;
+  margin-top: 10px;
+  font-family: Ubuntu;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32.17px;
+  color: var(--primary-bg-color);
+  
+}
+
+.container {
+  /* border: 2px solid red; */
+  height: auto;
+  margin-top: 0px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 2px solid rebeccapurple; */
+}
+
+.title p {
+  font-family: Ubuntu;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 32.17px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.title img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: -4px 4px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+.info1 {
+  /* border: 1px solid black; */
+  width: 500px;
+  height: 110px;
+  text-align: left;
+  padding: 10px;
+  box-shadow: -4px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  gap: 40px;
+  margin-top: 70px;
+  justify-content: center;
+}
+
+.info1 h4 {
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22.98px;
+}
+
+.info1 p {
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.79px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 15px;
+}
+
+.input input {
+  width: 600px;
+  height: 40px;
+  margin-left: 20px;
+}
+.input {
+  display: flex;
+  gap: 40px;
+  margin-top: 85px;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  bottom: 10px;
+  top: 640px;
+}
+
+
+
+.sidebar {
+  flex-shrink: 0;
+}
+
+.Chatbox {
+  flex-grow: 1;
+  padding-left: 250px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Chatbox {
+    padding-left: 0;
+  }
+
+  .info1:nth-of-type(n + 3) {
+    display: none;
+  }
+
+  .info1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .input {
+    margin-left: 0;
+    gap: 5px;
+  }
+
+  .input input {
+    width: 200px;
+    margin-left: 0px;
+  }
+
+  .info {
+    width: 270px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
