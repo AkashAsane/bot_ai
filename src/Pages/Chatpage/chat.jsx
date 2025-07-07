@@ -51,15 +51,19 @@ export default function Chat() {
     setView(false);
   };
 
-  const handleSaveConversation = () => {
-    const conversation = { messages, showRating, feedbacks };
-    setSavedConversations([...savedConversations, conversation]);
-    setMessages([]);
-    setShowRating({});
-    setFeedbacks({});
-    setIsAsked(false);
-    setView(false);
-  };
+ const handleSaveConversation = () => {
+  const conversation = { messages, showRating, feedbacks };
+  const stored = JSON.parse(localStorage.getItem("conversations")) || [];
+  const updated = [...stored, conversation];
+  localStorage.setItem("conversations", JSON.stringify(updated));
+
+  setMessages([]);
+  setShowRating({});
+  setFeedbacks({});
+  setIsAsked(false);
+  setView(false);
+};
+
 
   useEffect(() => {
     if (inputRef.current) {

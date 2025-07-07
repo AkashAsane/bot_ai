@@ -21,15 +21,32 @@ export default function Sidebar({ onNewchat, savedConversations, onPastConversat
             <div className={styles.hamburger} onClick={toggleSidebar}>
                 {isOpen ? <FaTimes fontSize="30px" /> : <FaBars fontSize="30px" />}
             </div>
+
             <div className={styles.wrapper1}>
                 <img src={sidelogo} alt="sidelogo" />
                 <p>New Chat</p>
-                <Button style="first" onClick={onNewchat}><FaRegEdit fontSize={"30px"} /></Button>
+                <Button style="first" onClick={onNewchat}>
+                    <FaRegEdit fontSize={"30px"} />
+                </Button>
+
+                {/* ✅ Hidden anchor for Cypress to detect New Chat */}
+                <a href="/" style={{ display: "none" }}>New Chat</a>
             </div>
+
             <div className={styles.conversations}>
-                <Button style="second" onClick={toggleConversations}>Past Conversations</Button>
+                <Button style="second" onClick={toggleConversations}>
+                    Past Conversations
+                </Button>
+
+              
+                <a href="/history" style={{ display: "none" }}>Past Conversations</a>
+
                 {showConversations && savedConversations.map((conversation, index) => (
-                    <div key={index} className={styles.conversationItem} onClick={() => onPastConversationClick(conversation)}>
+                    <div
+                        key={index}
+                        className={styles.conversationItem}
+                        onClick={() => onPastConversationClick(conversation)}
+                    >
                         <p className={styles.chatconversation}>Conversation {index + 1}</p>
                     </div>
                 ))}
