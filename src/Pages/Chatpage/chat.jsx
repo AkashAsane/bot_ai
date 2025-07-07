@@ -148,8 +148,8 @@ export default function Chat() {
             onChange={e => setMessage(e.target.value)}
             ref={inputRef}
           />
-          <Button style="input" onClick={handleMessage}>Ask</Button>
-          <Button style="input" onClick={handleSaveConversation}>Save</Button>
+          <Button      type="submit"  style="input" onClick={handleMessage}>Ask</Button>
+          <Button     type="button"   style="input" onClick={handleSaveConversation}>Save</Button>
         </form>
       </div>
     </div>
