@@ -25,21 +25,25 @@ export default function Sidebar({ onNewchat, savedConversations, onPastConversat
             <div className={styles.wrapper1}>
                 <img src={sidelogo} alt="sidelogo" />
                 <p>New Chat</p>
-                <Button style="first" onClick={onNewchat}>
-                    <FaRegEdit fontSize={"30px"} />
-                </Button>
 
-                {/* ✅ Hidden anchor for Cypress to detect New Chat */}
-                <a href="/" style={{ display: "none" }}>New Chat</a>
+                {/* 🚀 This will be visible to Cypress and also works as UI button */}
+                <a href="/" className={styles.link}>
+                    <Button style="first">
+                        <FaRegEdit fontSize={"30px"} />
+                    </Button>
+                </a>
             </div>
 
             <div className={styles.conversations}>
+                {/* Local toggle (optional for internal UI) */}
                 <Button style="second" onClick={toggleConversations}>
-                    Past Conversations
+                    Show Conversations
                 </Button>
 
-              
-                <a href="/history" style={{ display: "none" }}>Past Conversations</a>
+                {/* 🚀 This will be visible to Cypress and handle /history route */}
+                <a href="/history" className={styles.link}>
+                    <Button style="second">Past Conversations</Button>
+                </a>
 
                 {showConversations && savedConversations.map((conversation, index) => (
                     <div
