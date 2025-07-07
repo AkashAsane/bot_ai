@@ -24,9 +24,9 @@ export default function Sidebar({ onNewchat, savedConversations, onPastConversat
 
             <div className={styles.wrapper1}>
                 <img src={sidelogo} alt="sidelogo" />
-                <p>New Chat</p>
+                <a>New Chat</a>
 
-                {/* 🚀 This will be visible to Cypress and also works as UI button */}
+            
                 <a href="/" className={styles.link}>
                     <Button style="first">
                         <FaRegEdit fontSize={"30px"} />
@@ -35,12 +35,12 @@ export default function Sidebar({ onNewchat, savedConversations, onPastConversat
             </div>
 
             <div className={styles.conversations}>
-                {/* Local toggle (optional for internal UI) */}
+            
                 <Button style="second" onClick={toggleConversations}>
                     Show Conversations
                 </Button>
 
-                {/* 🚀 This will be visible to Cypress and handle /history route */}
+                
                 <a href="/history" className={styles.link}>
                     <Button style="second">Past Conversations</Button>
                 </a>
