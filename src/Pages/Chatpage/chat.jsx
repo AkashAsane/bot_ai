@@ -35,7 +35,7 @@ export default function Chat() {
     );
     const botResponse = responseFound
       ? responseFound.response
-      : "Sorry, I can't provide a response.";
+      : "Sorry, Did not understand your query!";
 
     const currentTime = new Date().toLocaleTimeString([], {
       hour: "2-digit",
