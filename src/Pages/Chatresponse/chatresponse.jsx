@@ -37,7 +37,7 @@ export default function Chatresponse({ messages, showRating, feedbacks, setShowR
             <div className={styles.botresponse}>
               <img src={logo} alt="Soul AI Logo" className={styles.botlogo} />
               <div className={styles.botinfo}>
-                <span>Soul Ai</span>
+                <span>Soul AI</span>
                 <p>{message.text}</p>
                 <div className={styles.feedback}>
                   <span className={styles.time}>{message.time}</span>
