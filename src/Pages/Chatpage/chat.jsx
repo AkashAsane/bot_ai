@@ -97,7 +97,7 @@ export default function Chat() {
 
       <div className={styles.Chatbox}>
         <header>
-          <h1>{view ? "Chat History" : "Bot Ai"}</h1>
+          <h1>{view ? "Chat History" : "Bot AI"}</h1>
         </header>
 
         <div className={styles.response}>
