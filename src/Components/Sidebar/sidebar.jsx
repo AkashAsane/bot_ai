@@ -23,16 +23,16 @@ export default function Sidebar({ onNewchat, savedConversations, onPastConversat
             </div>
 
             <div className={styles.wrapper1}>
-                <img src={sidelogo} alt="sidelogo" />
-                <a>New Chat</a>
+  <img src={sidelogo} alt="sidelogo" />
+  <p>New Chat</p>
 
-            
-                <a href="/" className={styles.link}>
-                    <Button style="first">
-                        <FaRegEdit fontSize={"30px"} />
-                    </Button>
-                </a>
-            </div>
+  <a href="/" className={styles.link}>
+    <Button style="first">
+      <FaRegEdit fontSize={"20px"} />&nbsp;New Chat
+    </Button>
+  </a>
+</div>
+
 
             <div className={styles.conversations}>
             
